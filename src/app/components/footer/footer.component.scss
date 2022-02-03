@@ -1,0 +1,12 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: gray;
+  height: 70px;
+
+  &__item {
+    padding: 0 15px;
+  }
+}
