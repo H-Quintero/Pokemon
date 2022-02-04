@@ -15,11 +15,11 @@
           {{ abilities.ability.name }}
         </p>
       </div>
-      <button class="btn" type="button" (click)="toggleActiveDetail()">
-        <span *ngIf="!isActive">Types</span>
-        <span *ngIf="isActive">Abilities</span>
-      </button>
     </section>
+    <button class="btn" type="button" (click)="toggleActiveDetail()">
+      <span *ngIf="!isActive">Go to Types</span>
+      <span *ngIf="isActive">Go toAbilities</span>
+    </button>
   </div>
 </div>
 
