@@ -1,14 +1,31 @@
 <div class="container">
-  <div class="container__item" *ngFor="let pokemon of pokemons">
-    <h3>{{ pokemon.name }}</h3>
-    <img [src]="pokemon.sprites.front_default" alt="Pokemon">
-    <p *ngFor="let type of pokemon.types">
-      {{type.type.name}}
-    </p>
-    <p *ngFor="let abilities of pokemon.abilities">
-      {{ abilities.ability.name }}
-    </p>
+  <div class="item" *ngFor="let pokemon of pokemons">
+    <h3 class="item__name">{{ pokemon.id }}.  {{ pokemon.name }}</h3>
+    <img class="item__image" [src]="pokemon.sprites.front_default" alt="Pokemon">
+    <section class="item__details">
+      <div class="item__types" *ngIf="isActive">
+        <h3>Types</h3>
+        <p *ngFor="let type of pokemon.types">
+          {{type.type.name}}
+        </p>
+      </div>
+      <div class="item__types" *ngIf="!isActive">
+        <h3>Abilities</h3>
+        <p *ngFor="let abilities of pokemon.abilities">
+          {{ abilities.ability.name }}
+        </p>
+      </div>
+      <button class="btn" type="button" (click)="toggleActiveDetail()">
+        <span *ngIf="!isActive">Types</span>
+        <span *ngIf="isActive">Abilities</span>
+      </button>
+    </section>
   </div>
-
 </div>
+
+
+
+
+
+
 

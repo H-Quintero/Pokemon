@@ -8,11 +8,16 @@ import { PokemonListService } from './pokemon-list.service';
 })
 export class PokemonListComponent implements OnInit {
   public pokemons: any[] = []
+  public isActive: boolean = false
   constructor(
     private pokemonListService: PokemonListService
   ) { }
 
   ngOnInit(): void {
+    this.getPokemonList()
+  }
+
+  getPokemonList() {
     this.pokemonListService.getPokemons()
       .subscribe((res: any) => {
         res.results.forEach((data: { name: string; }) => {
@@ -23,5 +28,9 @@ export class PokemonListComponent implements OnInit {
             })
           });
         })
-      }
+  }
+
+  toggleActiveDetail() {
+    this.isActive = !this.isActive
+  }
 }
