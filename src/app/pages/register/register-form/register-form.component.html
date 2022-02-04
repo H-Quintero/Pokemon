@@ -1,0 +1,15 @@
+<form novalidate [formGroup]="userRegisterForm">
+  <div>
+    <label for="name">Nombre: </label>
+    <input type="text" name="name" id="name" formControlName="name">
+  </div>
+  <div>
+    <label for="email">E-mail: </label>
+    <input type="email" name="email" id="email" formControlName="email">
+  </div>
+  <div>
+    <label for="email">Repetir el E-mail: </label>
+    <input type="email" name="emailRepeat" id="emailRepeat" formControlName="emailRepeat">
+  </div>
+
+</form>
