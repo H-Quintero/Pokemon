@@ -1,15 +1,40 @@
-<form novalidate [formGroup]="userRegisterForm">
-  <div>
-    <label for="name">Nombre: </label>
-    <input type="text" name="name" id="name" formControlName="name">
+<form novalidate [formGroup]="userRegisterForm" class="form">
+  <div class="form-container">
+    <div class="form-container__input">
+      <label for="name">Nombre: </label>
+      <input type="text" name="name" id="name" formControlName="name" />
+    </div>
+    <div class="form-container__input">
+      <label for="email">E-mail: </label>
+      <input type="email" name="email" id="email" formControlName="email" />
+    </div>
+    <div class="form-container__input">
+      <label for="email">Repetir el E-mail: </label>
+      <input
+        type="email"
+        name="emailRepeat"
+        id="emailRepeat"
+        formControlName="emailRepeat"
+      />
+    </div>
+    <div class="form-container__input">
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <div class="form-container__input">
+      <label for="passwordRepeat">Repetir password: </label>
+      <input
+        type="password"
+        name="passwordRepeat"
+        id="passwordRepeat"
+        formControlName="passwordRepeat"
+      />
+    </div>
+    <button (click)="onSubmit($event)">Registrar</button>
   </div>
-  <div>
-    <label for="email">E-mail: </label>
-    <input type="email" name="email" id="email" formControlName="email">
-  </div>
-  <div>
-    <label for="email">Repetir el E-mail: </label>
-    <input type="email" name="emailRepeat" id="emailRepeat" formControlName="emailRepeat">
-  </div>
-
 </form>

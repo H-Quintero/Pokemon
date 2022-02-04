@@ -1,0 +1,13 @@
+.form {
+  margin: 5%;
+  height: 100vh;
+  text-align: center;
+}
+.form-container {
+  margin: 0 30%;
+  &__input {
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+}

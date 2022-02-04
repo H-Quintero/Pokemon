@@ -32,4 +32,9 @@ public userRegisterForm: FormGroup
     })
   }
 
+  onSubmit(e: any) {
+    console.log(e)
+    console.log(this.userRegisterForm)
+  }
+
 }

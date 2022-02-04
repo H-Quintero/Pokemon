@@ -9,8 +9,10 @@
 .item {
   margin-bottom: 50px;
   width: 80%;
+  border: solid 1px black;
+  border-radius: 15px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
-  background-color: coral;
+  background: linear-gradient(to bottom right, rgb(217, 236, 39), rgb(247, 11, 11));
 
   display: flex;
   flex-direction: column;
@@ -18,8 +20,10 @@
 
   &__name {
     width: -webkit-fill-available;
-    background-color: blue;
+    background-color: rgb(139, 139, 241);
     border: 1px solid black;
+    border-radius: inherit;
+    margin: 15px;
 
     text-align: center;
     text-transform: capitalize;
@@ -29,11 +33,11 @@
     height: 50%;
     border-radius: 50%;
     margin: 10px;
-    background-color: cadetblue;
+    // background-color: white;
   }
 
   &__details {
-    background-color: khaki;
+    // background-color: khaki;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     margin: 0 15px 10px;

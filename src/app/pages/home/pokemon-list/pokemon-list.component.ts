@@ -24,7 +24,7 @@ export class PokemonListComponent implements OnInit {
           this.pokemonListService.getMoreData(data.name)
             .subscribe((result: any) => {
               this.pokemons.push(result);
-              console.log(this.pokemons);
+              // console.log(this.pokemons);
             })
           });
         })
